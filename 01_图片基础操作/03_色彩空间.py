@@ -61,7 +61,7 @@ cv.imshow("b", b)
 cv.imshow("g", g)
 cv.imshow("r", r)
 
-img[:, :,  0] = 0
+img[:, :, 0] = 0
 cv.imshow("img", img)
 
 # color_space_demo(img)

@@ -1,9 +1,11 @@
+
+
 import numpy as np
 import cv2
 import os
 
 # VideoCapture既支持视频文件的读取也支持从摄像机中读取视频
-cap = cv2.VideoCapture("hua.mp4")
+cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     os._exit(-1)
 
@@ -11,15 +13,14 @@ if not cap.isOpened():
 while True:
     # 一帧一帧的捕获
     ret, frame = cap.read()
-    if ret != True:
+    if not ret:
         break
 
-    h, w, ch = frame.shape
-    blank = np.ones([h, w, ch], frame.dtype)
-    print(blank.shape)
-
-    dst = cv2.addWeighted(frame, 0.9, blank, 0.1, 10)
-    cv2.imshow("contrast_brightness_demo", dst)
+    # h, w, ch = frame.shape
+    # blank = np.ones([h, w, ch], frame.dtype)
+    #
+    # dst = cv2.addWeighted(frame, 0.5, blank, 0.5, 10)
+    # cv2.imshow("contrast_brightness_demo", dst)
 
     cv2.imshow('frame', frame)
 
