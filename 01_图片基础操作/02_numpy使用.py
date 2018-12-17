@@ -33,14 +33,14 @@ def create_img():
 
     cv.imshow("new img", img)
 
-    '''
-    三通道图片
-    newImg = np.zeros([400, 400, 3], np.uint8)
-    newImg[:, :, 0] = np.ones([400, 400]) * 100
-    cv.imshow("new Img", newImg)
-    
-    :return: 
-    '''
+'''
+三通道图片
+newImg = np.zeros([400, 400, 3], np.uint8)
+newImg[:, :, 0] = np.ones([400, 400]) * 100
+cv.imshow("new Img", newImg)
+
+:return: 
+'''
 
 
 img = cv.imread("car.jpg")
